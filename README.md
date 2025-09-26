@@ -5,7 +5,7 @@
 
 ### Sobre mí
 
-Soy **David Hernández Jiménez**, alias **@descambiado**, y este perfil GitHub es mi taller de sistemas, ciberseguridad y automatización.  
+Soy **David Hernández**, alias **@descambiado**, y este perfil GitHub es mi taller de sistemas, ciberseguridad y automatización.  
 No todo está terminado, pero todo está **vivo**.
 
 En formación como Técnico Superior en ASIR (Administración de Sistemas Informáticos en Red)  
@@ -78,10 +78,10 @@ Si algo te sirve, úsalo. Si puedes mejorarlo, hazlo.
 - 📡 Web personal / portfolio: [descambiado.com](https://descambiado.com)
 - 🌍 Proyecto paralelo: [sotyhub.com](https://sotyhub.com)
 - 📎 Blog técnico: [noticias.sotyhub.com](https://noticias.sotyhub.com)
-- 💼 LinkedIn: [David Hernández Jiménez](https://linkedin.com/in/david-hernández-jiménez)
 - 💬 Discord: [discord.gg/sotyhub](https://discord.gg/sotyhub)
 - 📷 Instagram: [@descambiado](https://www.instagram.com/descambiado/)
 - 🪑 Tiktok: [@descambiado](https://www.tiktok.com/@descambiado)
+- 💼 LinkedIn: [David Hernández Jiménez](https://linkedin.com/in/david-hernández-jiménez)
 
 ---
 
