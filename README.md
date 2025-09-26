@@ -76,6 +76,7 @@ Si algo te sirve, úsalo. Si puedes mejorarlo, hazlo.
 - 🌍 Proyecto paralelo: [sotyhub.com](https://sotyhub.com)
 - 📎 Blog técnico: [noticias.sotyhub.com](https://noticias.sotyhub.com)
 - 💬 Discord: [discord.gg/sotyhub](https://discord.gg/sotyhub)
+- 📹 YouTube: [@descambiado](https://youtube.com/@Descambiado)
 - 📷 Instagram: [@descambiado](https://www.instagram.com/descambiado/)
 - 🪑 Tiktok: [@descambiado](https://www.tiktok.com/@descambiado)
 - 💼 LinkedIn: [David Hernández Jiménez](https://linkedin.com/in/david-hernández-jiménez)
