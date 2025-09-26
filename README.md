@@ -39,17 +39,14 @@ Apasionado del hacking ético, los foros técnicos, y compartir sin postureo
 
 ### 📁 Proyectos destacados
 
+### 👑 [Sotyhub](https://sotyhub.com/)
+#### Mi proyecto comunitario: foro, DAO y herramientas colaborativas para aprender y practicar ciberseguridad de manera ética y abierta.
+
 #### 🧪 [SotyPot](https://github.com/descambiado/Sotypot)
 Remix de TPOT CE — plataforma honeypot modular con enfoque práctico. Integración multi-servicio, visibilidad completa.
 
-#### 💻 [Ejercicio Bash – ASO](https://github.com/descambiado/Ejercicio-03.11.2024-Bash-ASO_DHJ)
-Scripting desde consola para control de servicios, permisos y auditoría básica en Linux. Proyecto de clase adaptado al mundo real.
-
-#### 🐧 [Foquitas Theme Remastered](https://github.com/descambiado/Foquitas_Theme_Remastered)
-Tema WordPress adaptado desde diseño original para comunicar impacto visual + accesibilidad.
-
-#### 🌐 [AlexiaFoquita Website](https://github.com/descambiado/AlexiaFoquita-Website)
-Landing con TypeScript enfocada en performance, estructura limpia y estética pop/kawaii.
+#### 💻 [BOFA](https://github.com/descambiado/BOFA)
+Best Of All Cybersecurity Suite - Suite de Ciberseguridad, recopilacion de SCRIPTS, LABORATORIOS Y ENSEÑANZA
 
 ---
 
