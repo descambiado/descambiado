@@ -1,0 +1,11 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#050505"/>
+  <g transform="translate(40 20)">
+    <path d="M110 20c50 0 90 40 90 90 0 60-40 110-90 130-50-20-90-70-90-130 0-50 40-90 90-90z" fill="#6a2cff"/>
+    <path d="M70 95c20-18 40-28 70-28 25 0 50 8 70 22-10 10-20 20-30 28-22-12-48-14-70-6-18 6-26 12-40 22-6-6-10-12-10-18z" fill="#bfbfbf"/>
+    <path d="M80 150c20 18 40 30 60 36 28-6 54-18 74-40-10 30-34 56-74 74-28-10-50-28-60-70z" fill="#e6e6e6"/>
+    <circle cx="96" cy="110" r="10" fill="#050505"/>
+    <circle cx="160" cy="110" r="10" fill="#050505"/>
+    <animateTransform attributeName="transform" type="translate" values="40 20;40 14;40 20" dur="2.6s" repeatCount="indefinite" />
+  </g>
+</svg>
