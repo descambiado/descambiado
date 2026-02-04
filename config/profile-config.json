@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "username": "descambiado",
+    "name": "David Hernández",
+    "handle": "@descambiado",
+    "location": "Spain",
+    "domain": "Infrastructure, Cybersecurity Operations, Automation Engineering",
+    "org": "SotyDev",
+    "version": "2026.3"
+  },
+  "theme": {
+    "primary_color": "#9d4edd",
+    "secondary_color": "#7b2cbf",
+    "dark_color": "#5a189a",
+    "light_color": "#c77dff",
+    "background": "#0d1117"
+  },
+  "social": {
+    "web": "https://descambiado.com",
+    "sotyhub": "https://sotyhub.com",
+    "blog": "https://noticias.sotyhub.com",
+    "discord": "https://discord.gg/sotyhub",
+    "youtube": "https://youtube.com/@Descambiado",
+    "instagram": "https://instagram.com/descambiado",
+    "tiktok": "https://tiktok.com/@descambiado",
+    "linkedin": "https://linkedin.com/in/david-hernández-jiménez"
+  },
+  "projects": {
+    "featured": [
+      {
+        "name": "SOTYHUB",
+        "description": "Community-driven cybersecurity lab and knowledge ecosystem",
+        "url": "https://sotyhub.com"
+      },
+      {
+        "name": "SOTYBOT",
+        "description": "Operator-oriented AI assistant / open agent engine",
+        "url": "https://github.com/descambiado/Sotybot"
+      },
+      {
+        "name": "BOFA",
+        "description": "Best Of All Cybersecurity Suite",
+        "url": "https://github.com/descambiado/BOFA"
+      },
+      {
+        "name": "SOTYPOT",
+        "description": "Modular multi-honeypot platform (TPOT CE remix)",
+        "url": "https://github.com/descambiado/Sotypot"
+      }
+    ]
+  },
+  "automation": {
+    "update_interval": "1h",
+    "enable_commits": true,
+    "enable_metrics": true,
+    "enable_content_generation": true
+  }
+}

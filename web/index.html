@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@descambiado - Hyper Revolutionary Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particlesCanvas"></canvas>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo glitch-text" data-text="@descambiado">@descambiado</div>
+            <nav class="nav">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#projects" class="nav-link">PROJECTS</a>
+                <a href="#stats" class="nav-link">STATS</a>
+                <a href="#terminal" class="nav-link">TERMINAL</a>
+            </nav>
+        </header>
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="neon-purple">SYSTEMS</span> · 
+                    <span class="neon-purple">CYBERSECURITY</span> · 
+                    <span class="neon-purple">AUTOMATION</span>
+                </h1>
+                <p class="hero-subtitle">Operativo real. Laboratorios reales. Sin teatro.</p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">OPERATOR STATE: ACTIVE</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Identity Section -->
+        <section class="identity">
+            <div class="identity-card">
+                <h2 class="section-title">IDENTITY</h2>
+                <div class="identity-content">
+                    <h3 class="identity-name">David Hernández</h3>
+                    <p class="identity-handle">@descambiado</p>
+                    <div class="identity-details">
+                        <p><strong>Location:</strong> Spain</p>
+                        <p><strong>Domain:</strong> Infrastructure, Cybersecurity Operations, Automation Engineering</p>
+                        <p><strong>Organization:</strong> SotyDev</p>
+                        <p><strong>GitHub:</strong> <a href="https://github.com/descambiado" target="_blank" class="identity-link">github.com/descambiado</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- System Status -->
+        <section class="system-status">
+            <div class="status-card">
+                <h3>SYSTEM STATUS</h3>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <span class="status-label">Profile Version</span>
+                        <span class="status-value" id="profileVersion">2026.3</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Operator State</span>
+                        <span class="status-value active">ACTIVE</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Workspace</span>
+                        <span class="status-value">LIVE</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Visibility</span>
+                        <span class="status-value">PUBLIC / PRIVATE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Live Telemetry -->
+        <section id="stats" class="telemetry">
+            <h2 class="section-title">LIVE TELEMETRY</h2>
+            <div class="stats-container">
+                <div class="stat-card-large">
+                    <h4>GitHub Statistics</h4>
+                    <div class="stat-metrics">
+                        <div class="metric">
+                            <span class="metric-label">Repositories</span>
+                            <span class="metric-value" id="repoCount">--</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Stars</span>
+                            <span class="metric-value" id="starCount">--</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Followers</span>
+                            <span class="metric-value" id="followerCount">--</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Following</span>
+                            <span class="metric-value" id="followingCount">--</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card-large">
+                    <h4>Activity Metrics</h4>
+                    <div class="activity-chart" id="activityChart">
+                        <canvas id="activityCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2 class="section-title">PROJECT ECOSYSTEM</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </section>
+        
+        <!-- Terminal Section -->
+        <section id="terminal" class="terminal-section">
+            <h2 class="section-title">INTERACTIVE TERMINAL</h2>
+            <div class="terminal-wrapper">
+                <div class="terminal-header">
+                    <div class="terminal-title">@descambiado://terminal</div>
+                    <div class="terminal-controls">
+                        <span class="control-btn close"></span>
+                        <span class="control-btn minimize"></span>
+                        <span class="control-btn maximize"></span>
+                    </div>
+                </div>
+                <div class="terminal-body" id="interactiveTerminal">
+                    <div class="terminal-line">
+                        <span class="prompt">descambiado@github:~$</span> <span class="command">help</span>
+                    </div>
+                    <div class="terminal-line output">
+                        Available commands: whoami, status, projects, manifest, clear
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">descambiado@github:~$</span> 
+                        <input type="text" class="terminal-input" id="terminalInput" autofocus>
+                        <span class="cursor-blink">█</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Manifest -->
+        <section class="manifest">
+            <h2 class="section-title">MANIFEST</h2>
+            <div class="manifest-content">
+                <p class="manifest-text">
+                    No construyo para métricas.<br>
+                    No publico para validación.<br>
+                    Publico para <strong class="neon-purple">externalizar conocimiento operativo</strong>.
+                </p>
+                <p class="manifest-text">
+                    Aquí hay:<br>
+                    iteraciones, fallos, sistemas parciales, experimentos vivos.
+                </p>
+                <p class="manifest-text">
+                    Si te sirve, úsalo.<br>
+                    Si lo puedes mejorar, contribuye.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="neon-purple">descambiado != broken</span><br>
+                    <span class="neon-purple">descambiado == out of pattern</span>
+                </p>
+                <div class="social-links">
+                    <a href="https://descambiado.com" class="social-link" target="_blank">WEB</a>
+                    <a href="https://sotyhub.com" class="social-link" target="_blank">SOTYHUB</a>
+                    <a href="https://github.com/descambiado" class="social-link" target="_blank">GITHUB</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

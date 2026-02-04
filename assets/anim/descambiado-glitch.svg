@@ -1,0 +1,20 @@
+<svg width="900" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9d4edd;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7b2cbf;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a189a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <text x="450" y="100" font-family="monospace" font-size="48" font-weight="bold" text-anchor="middle" fill="url(#purpleGradient)" filter="url(#glow)">
+    @descambiado
+  </text>
+  <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
+</svg>

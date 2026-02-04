@@ -1,0 +1,15 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9d4edd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a189a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="120" fill="none" stroke="url(#ringGradient)" stroke-width="4" stroke-dasharray="10,5">
+    <animateTransform attributeName="transform" type="rotate" values="0 150 150;360 150 150" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="150" r="100" fill="none" stroke="url(#ringGradient)" stroke-width="3" stroke-dasharray="5,10" opacity="0.7">
+    <animateTransform attributeName="transform" type="rotate" values="360 150 150;0 150 150" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <text x="150" y="160" font-family="monospace" font-size="16" text-anchor="middle" fill="#9d4edd" opacity="0.8">OPERATOR</text>
+</svg>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@descambiado Terminal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #0d1117;
+            font-family: 'Courier New', monospace;
+            color: #9d4edd;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .matrix-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .terminal-container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .terminal-header {
+            background: linear-gradient(90deg, #5a189a, #7b2cbf, #9d4edd);
+            padding: 10px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+        }
+        
+        .terminal-title {
+            font-weight: bold;
+            color: #0d1117;
+            text-shadow: 0 0 10px rgba(13, 17, 23, 0.5);
+        }
+        
+        .terminal-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .close { background: #ff5f56; }
+        .minimize { background: #ffbd2e; }
+        .maximize { background: #27c93f; }
+        
+        .terminal-body {
+            background: rgba(13, 17, 23, 0.95);
+            border: 2px solid #9d4edd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+            box-shadow: 0 0 30px rgba(157, 78, 221, 0.3);
+        }
+        
+        .terminal-line {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .prompt {
+            color: #9d4edd;
+            font-weight: bold;
+        }
+        
+        .command {
+            color: #7b2cbf;
+        }
+        
+        .output {
+            color: #c77dff;
+            margin-left: 20px;
+        }
+        
+        .glitch {
+            animation: glitch 2s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+        
+        .neon-text {
+            text-shadow: 
+                0 0 5px #9d4edd,
+                0 0 10px #9d4edd,
+                0 0 15px #9d4edd,
+                0 0 20px #9d4edd;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: rgba(157, 78, 221, 0.1);
+            border: 1px solid #9d4edd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #9d4edd;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #c77dff;
+            text-transform: uppercase;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: #9d4edd;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .typing {
+            overflow: hidden;
+            border-right: 2px solid #9d4edd;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-cursor 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-cursor {
+            from, to { border-color: transparent; }
+            50% { border-color: #9d4edd; }
+        }
+    </style>
+</head>
+<body>
+    <canvas class="matrix-bg" id="matrixCanvas"></canvas>
+    
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-title">@descambiado://terminal</div>
+            <div class="terminal-controls">
+                <button class="control-btn close"></button>
+                <button class="control-btn minimize"></button>
+                <button class="control-btn maximize"></button>
+            </div>
+        </div>
+        
+        <div class="terminal-body" id="terminalBody">
+            <div class="terminal-line">
+                <span class="prompt">descambiado@github:~$</span> <span class="command">whoami</span>
+            </div>
+            <div class="terminal-line output">
+                <span class="neon-text glitch">@descambiado</span> - Systems · Cybersecurity · Automation
+            </div>
+            
+            <div class="terminal-line">
+                <span class="prompt">descambiado@github:~$</span> <span class="command">status</span>
+            </div>
+            <div class="terminal-line output">
+                <div class="stats-grid" id="statsGrid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="repos">--</div>
+                        <div class="stat-label">Repositories</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="stars">--</div>
+                        <div class="stat-label">Stars</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="commits">--</div>
+                        <div class="stat-label">Commits</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="followers">--</div>
+                        <div class="stat-label">Followers</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="terminal-line">
+                <span class="prompt">descambiado@github:~$</span> <span class="command typing">cat manifest.txt</span>
+            </div>
+            <div class="terminal-line output">
+                <pre>
+descambiado != broken
+descambiado == out of pattern
+operator_state: ACTIVE
+workspace: LIVE
+visibility: public surface / private core
+                </pre>
+            </div>
+            
+            <div class="terminal-line">
+                <span class="prompt">descambiado@github:~$</span> <span class="cursor"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Matrix rain effect
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const matrix = "01@#$%^&*()_+-=[]{}|;:,.<>?";
+        const matrixArray = matrix.split("");
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+        
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(13, 17, 23, 0.04)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#9d4edd';
+            ctx.font = fontSize + 'px monospace';
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 35);
+        
+        // Fetch GitHub stats
+        async function fetchGitHubStats() {
+            try {
+                const response = await fetch('https://api.github.com/users/descambiado');
+                const data = await response.json();
+                
+                document.getElementById('repos').textContent = data.public_repos || '--';
+                document.getElementById('followers').textContent = data.followers || '--';
+                
+                // Fetch additional stats
+                const reposResponse = await fetch('https://api.github.com/users/descambiado/repos?per_page=100');
+                const reposData = await reposResponse.json();
+                
+                let totalStars = 0;
+                reposData.forEach(repo => {
+                    totalStars += repo.stargazers_count;
+                });
+                
+                document.getElementById('stars').textContent = totalStars || '--';
+                
+                // Fetch commit activity (approximation)
+                const eventsResponse = await fetch('https://api.github.com/users/descambiado/events/public?per_page=100');
+                const eventsData = await eventsResponse.json();
+                
+                const commits = eventsData.filter(event => event.type === 'PushEvent').length;
+                document.getElementById('commits').textContent = commits || '--';
+                
+            } catch (error) {
+                console.error('Error fetching GitHub stats:', error);
+            }
+        }
+        
+        // Auto-scroll terminal
+        function autoScroll() {
+            const terminalBody = document.getElementById('terminalBody');
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+        
+        // Initialize
+        fetchGitHubStats();
+        setInterval(fetchGitHubStats, 300000); // Update every 5 minutes
+        setInterval(autoScroll, 100);
+        
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>

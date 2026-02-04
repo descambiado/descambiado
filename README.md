@@ -1,11 +1,13 @@
+<!-- Purple Theme: #9d4edd, #7b2cbf, #5a189a, #c77dff -->
+
 <div align="center">
 
 <img src="assets/anim/descambiado-glitch.svg" alt="@descambiado glitch" style="max-width: 900px; width: 100%; height: auto;" />
 
-**Systems · Cybersecurity · Automation**  
+**<span style="color: #9d4edd;">Systems</span> · <span style="color: #7b2cbf;">Cybersecurity</span> · <span style="color: #c77dff;">Automation</span>**  
 **Operativo real. Laboratorios reales. Sin teatro.**
 
-<img src="assets/anim/descambiado-rotate.svg" alt="operator ring" style="max-width: 900px; width: 100%; height: auto;" />
+<img src="assets/anim/descambiado-rotate.svg" alt="operator ring" style="max-width: 300px; width: 100%; height: auto;" />
 
 </div>
 
@@ -27,15 +29,37 @@ org             : SotyDev
 
 <div align="center">
 
-![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark)
-![Uptime](https://img.shields.io/badge/operator_uptime-99.9%25-0d1117?style=flat)
+![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff&border_color=7b2cbf)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff&border_color=7b2cbf)
+![Uptime](https://img.shields.io/badge/operator_uptime-99.9%25-9d4edd?style=flat&logo=github)
 
 </div>
 
 ---
 
-## PROFILE
+## 🚀 INTERACTIVE TERMINAL & WEB
+
+<div align="center">
+
+**[🌐 View Advanced Web Profile](https://descambiado.github.io/descambiado/)** | **[💻 Interactive Terminal](profile-terminal.html)**
+
+<details>
+<summary>Click to view terminal preview</summary>
+
+![Terminal Preview](assets/anim/glitch-effect-1.gif)
+
+</details>
+
+</div>
+
+---
+
+## 👤 PROFILE / IDENTITY
+
+<div align="center">
+
+**<span style="color: #9d4edd; font-size: 1.2em;">David Hernández</span>**  
+**<span style="color: #7b2cbf;">@descambiado</span>**
 
 ```
 Name      : David Hernández
@@ -43,7 +67,12 @@ Handle    : @descambiado
 Location  : Spain
 Domain    : Infrastructure, Cybersecurity Operations, Automation Engineering
 Org       : SotyDev
+GitHub    : https://github.com/descambiado
 ```
+
+</div>
+
+---
 
 Esto **no** es un portfolio.  
 Esto es un **taller operativo**.
@@ -165,10 +194,25 @@ LINKEDIN   : https://linkedin.com/in/david-hernández-jiménez
 
 <img src="assets/anim/mask-purple.svg" alt="operator mask" width="220" height="220" />
 
+![Glitch Effect 1](assets/anim/glitch-effect-1.gif)
+![Glitch Effect 2](assets/anim/glitch-effect-2.gif)
+![Glitch Effect 4](assets/anim/glitch-effect-4.gif)
+![Glitch Effect 5](assets/anim/glitch-effect-5.gif)
+
 </div>
 
-<pre>
+<pre style="color: #9d4edd; text-align: center;">
 descambiado != broken
 descambiado == out of pattern
 profile_version = 2026.3
+automation_status = ACTIVE
 </pre>
+
+---
+
+<div align="center">
+
+**<span style="color: #9d4edd;">⚡ Fully Automated Profile ⚡</span>**  
+*Updated automatically via GitHub Actions*
+
+</div>
