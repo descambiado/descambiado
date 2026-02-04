@@ -59,81 +59,47 @@ def generate_badges(metrics: Dict[str, Any]) -> str:
 
 
 def update_system_status(readme_content: str, metrics: Dict[str, Any]) -> str:
-    """Update SYSTEM STATUS section with current metrics"""
+    """Update status section with current metrics"""
     github = metrics.get("github", {})
-    last_updated = metrics.get("last_updated", datetime.now().isoformat())
     
-    status_section = f"""## SYSTEM STATUS
+    status_section = f"""## status
 
-```
-profile_version : 2026.3
+<pre style="background: #0d1117; border: 1px solid #7b2cbf; border-radius: 4px; padding: 15px; color: #c77dff; font-family: monospace; font-size: 13px;">
 operator_state  : active
+focus           : detection engineering · purple team · automation
 workspace       : live
-visibility      : public surface / private core
-org             : SotyDev
 repositories    : {github.get('repositories', '--')}
 stars           : {github.get('stars', '--')}
 followers       : {github.get('followers', '--')}
-last_update     : {last_updated[:10]}
-```"""
+</pre>"""
     
-    # Replace SYSTEM STATUS section
-    pattern = r"## SYSTEM STATUS.*?```"
-    replacement = status_section + "\n"
+    # Replace status section
+    pattern = r"## status.*?</pre>"
+    replacement = status_section
     readme_content = re.sub(pattern, replacement, readme_content, flags=re.DOTALL)
     
     return readme_content
 
 
 def update_telemetry_section(readme_content: str, metrics: Dict[str, Any]) -> str:
-    """Update LIVE TELEMETRY section with dynamic badges"""
-    badges = generate_badges(metrics)
-    
-    telemetry_section = f"""## LIVE TELEMETRY
+    """Update telemetry section - stats are already in README, just ensure format is correct"""
+    telemetry_section = """<div align="center">
 
-<div align="center">
-
-{badges}
-
-![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff)
-![Uptime](https://img.shields.io/badge/operator_uptime-99.9%25-9d4edd?style=flat&logo=github)
+![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true)
 
 </div>"""
     
-    # Replace LIVE TELEMETRY section
-    pattern = r"## LIVE TELEMETRY.*?</div>"
-    readme_content = re.sub(pattern, telemetry_section, readme_content, flags=re.DOTALL)
+    # Replace stats section if it exists, otherwise do nothing (stats are already in README)
+    pattern = r"<div align=\"center\">\s*!\[Stats\].*?</div>"
+    if re.search(pattern, readme_content, flags=re.DOTALL):
+        readme_content = re.sub(pattern, telemetry_section, readme_content, flags=re.DOTALL)
     
     return readme_content
 
 
 def add_web_component_section(readme_content: str) -> str:
-    """Add web component section to README"""
-    web_section = """
----
-
-## INTERACTIVE TERMINAL
-
-<div align="center">
-
-🚀 **[View Interactive Terminal](https://descambiado.github.io/descambiado/)** 🚀
-
-<details>
-<summary>Click to view terminal preview</summary>
-
-![Terminal Preview](assets/anim/glitch-effect-1.gif)
-
-</details>
-
-</div>
-"""
-    
-    # Insert after SYSTEM STATUS section
-    pattern = r"(## SYSTEM STATUS.*?```\n\n---)"
-    replacement = r"\1" + web_section
-    readme_content = re.sub(pattern, replacement, readme_content, flags=re.DOTALL)
-    
+    """No web component section needed - everything is embedded"""
     return readme_content
 
 

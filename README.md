@@ -1,218 +1,129 @@
-<!-- Purple Theme: #9d4edd, #7b2cbf, #5a189a, #c77dff -->
-
 <div align="center">
 
-<img src="assets/anim/descambiado-glitch.svg" alt="@descambiado glitch" style="max-width: 900px; width: 100%; height: auto;" />
+<img src="assets/anim/glitch-effect-1.gif" alt="y2k" width="120" height="120" style="image-rendering: pixelated; transition: opacity 0.3s ease;" />
 
-**<span style="color: #9d4edd;">Systems</span> · <span style="color: #7b2cbf;">Cybersecurity</span> · <span style="color: #c77dff;">Automation</span>**  
-**Operativo real. Laboratorios reales. Sin teatro.**
+<h1 style="color: #9d4edd; font-family: monospace; letter-spacing: 2px; margin: 20px 0;">@descambiado</h1>
 
-<img src="assets/anim/descambiado-rotate.svg" alt="operator ring" style="max-width: 300px; width: 100%; height: auto;" />
+<p style="color: #7b2cbf; font-size: 14px; letter-spacing: 1px; margin: 10px 0;">SOC Analyst | Purple Team | Tool Builder</p>
+
+<p style="margin: 15px 0;"><a href="https://descambiado.github.io/descambiado/" style="color: #c77dff; text-decoration: none; font-size: 12px; letter-spacing: 1px;">[ web ]</a></p>
+
+<img src="assets/anim/glitch-effect-2.gif" alt="y2k" width="80" height="80" style="image-rendering: pixelated; transition: opacity 0.3s ease;" />
 
 </div>
 
 ---
 
-## SYSTEM STATUS
+## status
 
-```
-profile_version : 2026.3
+<pre style="background: #0d1117; border: 1px solid #7b2cbf; border-radius: 4px; padding: 15px; color: #c77dff; font-family: monospace; font-size: 13px;">
 operator_state  : active
+focus           : detection engineering · purple team · automation
 workspace       : live
-visibility      : public surface / private core
-org             : SotyDev
-```
-
----
-
-## LIVE TELEMETRY
+</pre>
 
 <div align="center">
 
-![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff&border_color=7b2cbf)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff&border_color=7b2cbf)
-![Uptime](https://img.shields.io/badge/operator_uptime-99.9%25-9d4edd?style=flat&logo=github)
+![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true)
 
 </div>
 
 ---
 
-## 🚀 INTERACTIVE TERMINAL & WEB
+## focus
 
-<div align="center">
+<div style="line-height: 1.8; color: #c77dff;">
 
-**[🌐 View Advanced Web Profile](https://descambiado.github.io/descambiado/)** | **[💻 Interactive Terminal](profile-terminal.html)**
+**<span style="color: #9d4edd;">Detection Engineering</span>**  
+MITRE ATT&CK · SIEM correlation · Threat hunting
 
-<details>
-<summary>Click to view terminal preview</summary>
+**<span style="color: #9d4edd;">Purple Team Operations</span>**  
+Red/Blue convergence · Adversary simulation · Defensive validation
 
-![Terminal Preview](assets/anim/glitch-effect-1.gif)
+**<span style="color: #9d4edd;">Automation & Tooling</span>**  
+Python · Bash · APIs · Internal frameworks
 
-</details>
-
-</div>
-
----
-
-## 👤 PROFILE / IDENTITY
-
-<div align="center">
-
-**<span style="color: #9d4edd; font-size: 1.2em;">David Hernández</span>**  
-**<span style="color: #7b2cbf;">@descambiado</span>**
-
-```
-Name      : David Hernández
-Handle    : @descambiado
-Location  : Spain
-Domain    : Infrastructure, Cybersecurity Operations, Automation Engineering
-Org       : SotyDev
-GitHub    : https://github.com/descambiado
-```
+**<span style="color: #9d4edd;">BOFA Suite</span>**  
+150+ tools for Blue/Red/Purple Team operations
 
 </div>
 
 ---
 
-Esto **no** es un portfolio.  
-Esto es un **taller operativo**.
+## projects
 
-Aquí vas a ver:
-- tooling experimental
-- prototipos operativos
-- sistemas a medio cocinar
-- laboratorios de ataque/defensa
-- frameworks internos expuestos en público
+<div style="line-height: 1.9;">
 
-Todo existe para **romperse**, **medirse** y **mejorarse**.
+**<span style="color: #9d4edd;">SotyHUB</span>**  
+Cybersecurity community & knowledge ecosystem  
+<code style="color: #7b2cbf;">https://sotyhub.com</code>
 
----
+**<span style="color: #9d4edd;">BOFA</span>**  
+Cybersecurity Operations Framework Advanced (150+ tools)  
+<code style="color: #7b2cbf;">https://github.com/descambiado/BOFA</code>
 
-## OPERATIONAL FOCUS
-
-[+] Blue / Red / Purple Team convergence  
-[+] Observabilidad y monitoreo de infraestructura  
-[+] Honeypots, telemetría del atacante y trazabilidad  
-[+] Tooling para SOC y respuesta real  
-[+] Automatización de tareas operativas repetitivas  
-[+] Externalización del conocimiento con herramientas abiertas
-
-Principios de diseño:
-- sistemas observables
-- labs reproducibles
-- mínima abstracción
-- máxima visibilidad
-- realismo operativo
-
----
-
-## CORE CAPABILITIES
-
-**INFRASTRUCTURE**
-- Linux (Kali, Debian-based environments)
-- Orquestación de servicios con Docker
-- Provisionamiento con Terraform
-- Azure environments
-- Pipelines de monitoreo (Zabbix)
-
-**CYBERSECURITY**
-- Web application testing
-- Attack surface mapping
-- Honeypot deployment and telemetry
-- Adversary behavior observation
-- Defensive visibility design
-
-**AUTOMATION**
-- Bash
-- PowerShell
-- Python
-- Git-based workflows
-- Internal automation frameworks
-
----
-
-## PROJECT ECOSYSTEM
-
-**SOTYHUB**  
-Community-driven cybersecurity lab and knowledge ecosystem  
-https://sotyhub.com
-
-**SOTYBOT**  
+**<span style="color: #9d4edd;">SOTYBOT</span>**  
 Operator-oriented AI assistant / open agent engine  
-https://github.com/descambiado/Sotybot
+<code style="color: #7b2cbf;">https://github.com/descambiado/Sotybot</code>
 
-**BOFA**  
-Best Of All Cybersecurity Suite  
-https://github.com/descambiado/BOFA
-
-**SOTYPOT**  
+**<span style="color: #9d4edd;">SOTYPOT</span>**  
 Modular multi-honeypot platform (TPOT CE remix)  
-https://github.com/descambiado/Sotypot
+<code style="color: #7b2cbf;">https://github.com/descambiado/Sotypot</code>
 
-**SOTY SENTINEL DEFENSE GRID**  
-Private R&D: detection surfaces and defensive grids
+**<span style="color: #9d4edd;">Baby Pluto Guard</span>**  
+Educational monitoring & detection scanner
 
-**BABY PLUTO GUARD**  
-Lightweight operator companion tooling
-
-**KUOOREX / YUNG KUOO**  
-Creative R&D: digital identity and tech narrative via music tooling
-
-**FOQUITAS ECOSYSTEM**  
-Web/theme experiments for frontend and deployment practice
+</div>
 
 ---
 
-## MANIFEST
+<div align="center" style="margin: 30px 0;">
+
+<img src="assets/anim/glitch-effect-4.gif" alt="y2k" width="100" height="100" style="image-rendering: pixelated; margin: 0 10px;" /> <img src="assets/anim/glitch-effect-5.gif" alt="y2k" width="100" height="100" style="image-rendering: pixelated; margin: 0 10px;" />
+
+</div>
+
+---
+
+## manifest
+
+<div style="line-height: 2; color: #c77dff; font-style: italic;">
 
 No construyo para métricas.  
 No publico para validación.  
-Publico para **externalizar conocimiento operativo**.
+Publico para **<span style="color: #9d4edd; font-style: normal;">externalizar conocimiento operativo</span>**.
 
-Aquí hay:  
-iteraciones, fallos, sistemas parciales, experimentos vivos.
+Aquí hay: iteraciones, fallos, sistemas parciales, experimentos vivos.
 
 Si te sirve, úsalo.  
 Si lo puedes mejorar, contribuye.
 
----
-
-## EXTERNAL CHANNELS
-
-WEB        : https://descambiado.com  
-SOTYHUB    : https://sotyhub.com  
-BLOG       : https://noticias.sotyhub.com  
-DISCORD    : https://discord.gg/sotyhub  
-YOUTUBE    : https://youtube.com/@Descambiado  
-INSTAGRAM  : https://instagram.com/descambiado  
-TIKTOK     : https://tiktok.com/@descambiado  
-LINKEDIN   : https://linkedin.com/in/david-hernández-jiménez
+</div>
 
 ---
 
-<div align="center">
+## channels
 
-<img src="assets/anim/mask-purple.svg" alt="operator mask" width="220" height="220" />
+<div style="font-family: monospace; font-size: 13px; line-height: 1.8; color: #7b2cbf;">
 
-![Glitch Effect 1](assets/anim/glitch-effect-1.gif)
-![Glitch Effect 2](assets/anim/glitch-effect-2.gif)
-![Glitch Effect 4](assets/anim/glitch-effect-4.gif)
-![Glitch Effect 5](assets/anim/glitch-effect-5.gif)
+WEB · <code style="color: #c77dff;">https://descambiado.com</code>  
+SOTYHUB · <code style="color: #c77dff;">https://sotyhub.com</code>  
+BLOG · <code style="color: #c77dff;">https://noticias.sotyhub.com</code>  
+DISCORD · <code style="color: #c77dff;">https://discord.gg/sotyhub</code>  
+YOUTUBE · <code style="color: #c77dff;">https://youtube.com/@Descambiado</code>
 
 </div>
 
-<pre style="color: #9d4edd; text-align: center;">
-descambiado != broken
-descambiado == out of pattern
-profile_version = 2026.3
-automation_status = ACTIVE
-</pre>
-
 ---
 
 <div align="center">
 
-**<span style="color: #9d4edd;">⚡ Fully Automated Profile ⚡</span>**  
-*Updated automatically via GitHub Actions*
+<img src="assets/anim/mask-purple.svg" alt="mask" width="180" height="180" />
+
+<pre style="color: #9d4edd;">
+descambiado != broken
+descambiado == out of pattern
+</pre>
 
 </div>

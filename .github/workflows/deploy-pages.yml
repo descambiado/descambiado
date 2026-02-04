@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'web/**'
-      - '.github/workflows/deploy-pages.yml'
+      - 'index.html'
+      - 'assets/**'
   workflow_dispatch:
 
 permissions:
@@ -34,7 +34,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: './web'
+          path: '.'
       
       - name: Deploy to GitHub Pages
         id: deployment
