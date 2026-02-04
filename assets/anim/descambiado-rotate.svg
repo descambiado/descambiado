@@ -1,0 +1,16 @@
+<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="200" fill="#050505" />
+  <g transform="translate(450 100)">
+    <g>
+      <text x="0" y="12" text-anchor="middle" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="40" font-weight="600" fill="#c5ff41">
+        operator::descambiado
+      </text>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+    </g>
+  </g>
+  <g font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="12" fill="#9aa4b2" opacity="0.7">
+    <text x="24" y="28">signal: stable</text>
+    <text x="24" y="46">stack: live</text>
+    <text x="24" y="64">mode: nocturne</text>
+  </g>
+</svg>

@@ -1,86 +1,174 @@
-<h1 align="center">@descambiado</h1>
-<p align="center"><i>Aprendiz público. Pruebas reales. Proyectos sin máscara.</i></p>
+<div align="center">
+
+<img src="assets/anim/descambiado-glitch.svg" alt="@descambiado glitch" style="max-width: 900px; width: 100%; height: auto;" />
+
+**Systems · Cybersecurity · Automation**  
+**Operativo real. Laboratorios reales. Sin teatro.**
+
+<img src="assets/anim/descambiado-rotate.svg" alt="operator ring" style="max-width: 900px; width: 100%; height: auto;" />
+
+</div>
 
 ---
 
-### Sobre mí
-
-Soy **David Hernández**, alias **@descambiado**, y este perfil GitHub es mi taller de sistemas, ciberseguridad y automatización.  
-No todo está terminado, pero todo está **vivo**.
-
-En formación como Técnico Superior en ASIR (Administración de Sistemas Informáticos en Red)  
-Creador de SotyPot y herramientas prácticas para entornos reales  
-Apasionado del hacking ético, los foros técnicos, y compartir sin postureo
-
----
-
-### Stack técnico
-
-#### Seguridad & Infraestructura
-![Linux](https://img.shields.io/badge/Linux-111?style=flat&logo=linux)
-![Kali](https://img.shields.io/badge/Kali_Linux-111?style=flat&logo=kalilinux)
-![Zabbix](https://img.shields.io/badge/Zabbix-111?style=flat&logo=zabbix)
-![Docker](https://img.shields.io/badge/Docker-111?style=flat&logo=docker)
-![Azure](https://img.shields.io/badge/Azure-111?style=flat&logo=microsoftazure)
-![Terraform](https://img.shields.io/badge/Terraform-111?style=flat&logo=terraform)
-
-#### Ciberseguridad & Pentesting
-![Burp Suite](https://img.shields.io/badge/Burp_Suite-111?style=flat)
-![OWASP ZAP](https://img.shields.io/badge/OWASP_ZAP-111?style=flat)
-![Metasploit](https://img.shields.io/badge/Metasploit-111?style=flat)
-
-#### Automatización & Dev
-![Bash](https://img.shields.io/badge/Bash-111?style=flat&logo=gnubash)
-![PowerShell](https://img.shields.io/badge/PowerShell-111?style=flat&logo=powershell)
-![Python](https://img.shields.io/badge/Python-111?style=flat&logo=python)
-![Git](https://img.shields.io/badge/Git-111?style=flat&logo=git)
-
----
-
-### 📁 Proyectos destacados
-
-### 👑 [Sotyhub](https://sotyhub.com/)
-#### Mi proyecto comunitario: foro, DAO y herramientas colaborativas para aprender y practicar ciberseguridad de manera ética y abierta.
-
-#### 🧪 [SotyPot](https://github.com/descambiado/Sotypot)
-Remix de TPOT CE — plataforma honeypot modular con enfoque práctico. Integración multi-servicio, visibilidad completa.
-
-#### 💻 [BOFA](https://github.com/descambiado/BOFA)
-Best Of All Cybersecurity Suite - Suite de Ciberseguridad, recopilacion de SCRIPTS, LABORATORIOS Y ENSEÑANZA
-
----
-
-### 📊 Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=tokyonight&hide_title=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=tokyonight)
-
----
-
-###  Manifiesto @descambiado
+## SYSTEM STATUS
 
 ```
-No construyo para likes.
-No comparto para posturear.
-Comparto para no olvidar.
-
-Aquí lo que hay: pruebas, fallos, cambios, comunidad.
-Si algo te sirve, úsalo. Si puedes mejorarlo, hazlo.
+profile_version : 2026.3
+operator_state  : active
+workspace       : live
+visibility      : public surface / private core
+org             : SotyDev
 ```
 
 ---
 
-### 🌐 Conecta conmigo
+## LIVE TELEMETRY
 
-- 📡 Web personal / portfolio: [descambiado.com](https://descambiado.com)
-- 🌍 Proyecto paralelo: [sotyhub.com](https://sotyhub.com)
-- 📎 Blog técnico: [noticias.sotyhub.com](https://noticias.sotyhub.com)
-- 💬 Discord: [discord.gg/sotyhub](https://discord.gg/sotyhub)
-- 📹 YouTube: [@descambiado](https://youtube.com/@Descambiado)
-- 📷 Instagram: [@descambiado](https://www.instagram.com/descambiado/)
-- 🪑 Tiktok: [@descambiado](https://www.tiktok.com/@descambiado)
-- 💼 LinkedIn: [David Hernández Jiménez](https://linkedin.com/in/david-hernández-jiménez)
+<div align="center">
+
+![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark)
+![Uptime](https://img.shields.io/badge/operator_uptime-99.9%25-0d1117?style=flat)
+
+</div>
 
 ---
 
-<p align="center"><b>descambiado ≠ roto. Solo fuera del molde.</b></p>
+## PROFILE
+
+```
+Name      : David Hernández
+Handle    : @descambiado
+Location  : Spain
+Domain    : Infrastructure, Cybersecurity Operations, Automation Engineering
+Org       : SotyDev
+```
+
+Esto **no** es un portfolio.  
+Esto es un **taller operativo**.
+
+Aquí vas a ver:
+- tooling experimental
+- prototipos operativos
+- sistemas a medio cocinar
+- laboratorios de ataque/defensa
+- frameworks internos expuestos en público
+
+Todo existe para **romperse**, **medirse** y **mejorarse**.
+
+---
+
+## OPERATIONAL FOCUS
+
+[+] Blue / Red / Purple Team convergence  
+[+] Observabilidad y monitoreo de infraestructura  
+[+] Honeypots, telemetría del atacante y trazabilidad  
+[+] Tooling para SOC y respuesta real  
+[+] Automatización de tareas operativas repetitivas  
+[+] Externalización del conocimiento con herramientas abiertas
+
+Principios de diseño:
+- sistemas observables
+- labs reproducibles
+- mínima abstracción
+- máxima visibilidad
+- realismo operativo
+
+---
+
+## CORE CAPABILITIES
+
+**INFRASTRUCTURE**
+- Linux (Kali, Debian-based environments)
+- Orquestación de servicios con Docker
+- Provisionamiento con Terraform
+- Azure environments
+- Pipelines de monitoreo (Zabbix)
+
+**CYBERSECURITY**
+- Web application testing
+- Attack surface mapping
+- Honeypot deployment and telemetry
+- Adversary behavior observation
+- Defensive visibility design
+
+**AUTOMATION**
+- Bash
+- PowerShell
+- Python
+- Git-based workflows
+- Internal automation frameworks
+
+---
+
+## PROJECT ECOSYSTEM
+
+**SOTYHUB**  
+Community-driven cybersecurity lab and knowledge ecosystem  
+https://sotyhub.com
+
+**SOTYBOT**  
+Operator-oriented AI assistant / open agent engine  
+https://github.com/descambiado/Sotybot
+
+**BOFA**  
+Best Of All Cybersecurity Suite  
+https://github.com/descambiado/BOFA
+
+**SOTYPOT**  
+Modular multi-honeypot platform (TPOT CE remix)  
+https://github.com/descambiado/Sotypot
+
+**SOTY SENTINEL DEFENSE GRID**  
+Private R&D: detection surfaces and defensive grids
+
+**BABY PLUTO GUARD**  
+Lightweight operator companion tooling
+
+**KUOOREX / YUNG KUOO**  
+Creative R&D: digital identity and tech narrative via music tooling
+
+**FOQUITAS ECOSYSTEM**  
+Web/theme experiments for frontend and deployment practice
+
+---
+
+## MANIFEST
+
+No construyo para métricas.  
+No publico para validación.  
+Publico para **externalizar conocimiento operativo**.
+
+Aquí hay:  
+iteraciones, fallos, sistemas parciales, experimentos vivos.
+
+Si te sirve, úsalo.  
+Si lo puedes mejorar, contribuye.
+
+---
+
+## EXTERNAL CHANNELS
+
+WEB        : https://descambiado.com  
+SOTYHUB    : https://sotyhub.com  
+BLOG       : https://noticias.sotyhub.com  
+DISCORD    : https://discord.gg/sotyhub  
+YOUTUBE    : https://youtube.com/@Descambiado  
+INSTAGRAM  : https://instagram.com/descambiado  
+TIKTOK     : https://tiktok.com/@descambiado  
+LINKEDIN   : https://linkedin.com/in/david-hernández-jiménez
+
+---
+
+<div align="center">
+
+<img src="assets/anim/mask-purple.svg" alt="operator mask" width="220" height="220" />
+
+</div>
+
+<pre>
+descambiado != broken
+descambiado == out of pattern
+profile_version = 2026.3
+</pre>

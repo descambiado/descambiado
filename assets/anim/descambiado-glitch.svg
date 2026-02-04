@@ -1,0 +1,21 @@
+<svg width="900" height="140" viewBox="0 0 900 140" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="140" fill="#050505" />
+  <g font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="64" font-weight="700">
+    <text x="450" y="88" text-anchor="middle" fill="#00f5ff" opacity="0.6">@descambiado</text>
+    <text x="446" y="86" text-anchor="middle" fill="#ff2a6d" opacity="0.7">@descambiado</text>
+    <text x="452" y="90" text-anchor="middle" fill="#ffffff">@descambiado</text>
+    <animate attributeName="opacity" values="0.85;1;0.7;1" dur="1.2s" repeatCount="indefinite" />
+  </g>
+  <g stroke="#0d1117" stroke-width="2">
+    <line x1="0" y1="16" x2="900" y2="16" opacity="0.5" />
+    <line x1="0" y1="124" x2="900" y2="124" opacity="0.5" />
+  </g>
+  <g fill="#00f5ff" opacity="0.6">
+    <rect x="0" y="10" width="140" height="6">
+      <animate attributeName="x" values="-140;900" dur="2.4s" repeatCount="indefinite" />
+    </rect>
+    <rect x="760" y="124" width="140" height="6">
+      <animate attributeName="x" values="900;-140" dur="2.4s" repeatCount="indefinite" />
+    </rect>
+  </g>
+</svg>
