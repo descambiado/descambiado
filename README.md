@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/anim/glitch-effect-1.gif" alt="y2k" width="120" height="120" style="image-rendering: pixelated; transition: opacity 0.3s ease;" />
+<img src="assets/anim/glitch-effect-1.gif" alt="y2k" width="620" height="620" style="image-rendering: pixelated; transition: opacity 0.3s ease;" />
 
 <h1 style="color: #9d4edd; font-family: monospace; letter-spacing: 2px; margin: 20px 0;">@descambiado</h1>
 
@@ -8,7 +8,7 @@
 
 <p style="margin: 15px 0;"><a href="https://descambiado.github.io/descambiado/" style="color: #c77dff; text-decoration: none; font-size: 12px; letter-spacing: 1px;">[ web ]</a></p>
 
-<img src="assets/anim/glitch-effect-2.gif" alt="y2k" width="80" height="80" style="image-rendering: pixelated; transition: opacity 0.3s ease;" />
+<img src="assets/anim/glitch-effect-2.gif" alt="y2k" width="340" height="340" style="image-rendering: pixelated; transition: opacity 0.3s ease;" />
 
 </div>
 
@@ -80,7 +80,7 @@ Educational monitoring & detection scanner
 
 <div align="center" style="margin: 30px 0;">
 
-<img src="assets/anim/glitch-effect-4.gif" alt="y2k" width="100" height="100" style="image-rendering: pixelated; margin: 0 10px;" /> <img src="assets/anim/glitch-effect-5.gif" alt="y2k" width="100" height="100" style="image-rendering: pixelated; margin: 0 10px;" />
+<img src="assets/anim/glitch-effect-4.gif" alt="y2k" width="300" height="300" style="image-rendering: pixelated; margin: 0 10px;" /> <img src="assets/anim/glitch-effect-5.gif" alt="y2k" width="300" height="300" style="image-rendering: pixelated; margin: 0 10px;" />
 
 </div>
 
@@ -119,7 +119,7 @@ YOUTUBE · <code style="color: #c77dff;">https://youtube.com/@Descambiado</code>
 
 <div align="center">
 
-<img src="assets/anim/mask-purple.svg" alt="mask" width="180" height="180" />
+<img src="assets/anim/mask-purple.svg" alt="mask" width="140" height="140" />
 
 <pre style="color: #9d4edd;">
 descambiado != broken
