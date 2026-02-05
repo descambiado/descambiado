@@ -24,8 +24,9 @@ workspace       : live
 
 <div align="center">
 
-![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true)
+<img src="https://github-readme-stats.vercel.app/api?username=descambiado&amp;show_icons=true&amp;theme=dark&amp;hide_title=true&amp;bg_color=0d1117&amp;title_color=9d4edd&amp;icon_color=9d4edd&amp;text_color=c77dff&amp;hide_border=true" alt="GitHub Stats" width="400" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&amp;layout=compact&amp;theme=dark&amp;bg_color=0d1117&amp;title_color=9d4edd&amp;text_color=c77dff&amp;hide_border=true" alt="Top Languages" width="400" />
 
 </div>
 

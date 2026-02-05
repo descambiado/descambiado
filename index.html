@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@descambiado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,319 +15,609 @@
         }
 
         :root {
-            --purple-dark: #0d1117;
+            --bg: #06050a;
+            --bg-card: #0c0b12;
             --purple-primary: #9d4edd;
             --purple-medium: #7b2cbf;
             --purple-light: #c77dff;
             --purple-darkest: #5a189a;
+            --purple-glow: rgba(157, 78, 221, 0.5);
+            --text: #e8e0f0;
+            --text-muted: #8870a0;
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
         }
 
         body {
-            font-family: 'Courier New', monospace;
-            background: var(--purple-dark);
-            color: var(--purple-light);
-            line-height: 1.6;
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
             overflow-x: hidden;
+            min-height: 100vh;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+        /* Y2K scanlines overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 0, 0, 0.03) 2px,
+                rgba(0, 0, 0, 0.03) 4px
+            );
+            pointer-events: none;
+            z-index: 9999;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            animation: fadeIn 1s ease-in;
+        .slides {
+            /* wrapper only; window scrolls */
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .slide {
+            min-height: 100vh;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1.5rem;
+            position: relative;
         }
 
-        .gif-container {
-            margin: 20px 0;
+        .slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(123, 44, 191, 0.12), transparent 60%),
+                        radial-gradient(ellipse 50% 30% at 100% 80%, rgba(90, 24, 154, 0.06), transparent 50%);
+            pointer-events: none;
         }
 
-        .gif-container img {
-            image-rendering: pixelated;
-            transition: opacity 0.3s ease;
+        .slide-content {
+            max-width: 640px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(48px) scale(0.98);
+            transition: opacity 1s var(--ease-out-expo), transform 1s var(--ease-out-expo);
         }
 
-        h1 {
+        .slide.is-inview .slide-content {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Stagger children inside slide */
+        .slide.is-inview .slide-content > * {
+            animation: slideUpFade 0.8s var(--ease-out-expo) backwards;
+        }
+
+        .slide.is-inview .slide-content > *:nth-child(1) { animation-delay: 0.1s; }
+        .slide.is-inview .slide-content > *:nth-child(2) { animation-delay: 0.2s; }
+        .slide.is-inview .slide-content > *:nth-child(3) { animation-delay: 0.3s; }
+        .slide.is-inview .slide-content > *:nth-child(4) { animation-delay: 0.4s; }
+        .slide.is-inview .slide-content > *:nth-child(5) { animation-delay: 0.5s; }
+        .slide.is-inview .slide-content > *:nth-child(6) { animation-delay: 0.6s; }
+        .slide.is-inview .slide-content > *:nth-child(7) { animation-delay: 0.7s; }
+        .slide.is-inview .slide-content > *:nth-child(8) { animation-delay: 0.8s; }
+        .slide.is-inview .slide-content > *:nth-child(9) { animation-delay: 0.9s; }
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Glitch title - slide 1 */
+        .glitch-wrap {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-wrap h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: clamp(2rem, 6vw, 3rem);
+            letter-spacing: 0.2em;
             color: var(--purple-primary);
-            font-size: 42px;
-            letter-spacing: 3px;
-            margin: 20px 0;
-            text-shadow: 0 0 10px var(--purple-primary);
+            text-shadow: 0 0 32px var(--purple-glow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .slide.is-inview .glitch-wrap h1 {
+            animation: glitchMain 0.4s var(--ease-in-out-quart) 0.5s;
+        }
+
+        @keyframes glitchMain {
+            0%, 100% { transform: translate(0); filter: hue-rotate(0deg); }
+            20% { transform: translate(-2px, 1px); filter: hue-rotate(-5deg); }
+            40% { transform: translate(2px, -1px); filter: hue-rotate(5deg); }
+            60% { transform: translate(-1px, 2px); filter: hue-rotate(-3deg); }
+            80% { transform: translate(1px, -2px); filter: hue-rotate(3deg); }
         }
 
         .tagline {
-            color: var(--purple-medium);
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin: 10px 0;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            margin-top: 1rem;
         }
 
-        section {
-            margin: 50px 0;
-            animation: slideIn 0.8s ease-out;
+        .gif-hero {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
+        .gif-hero img {
+            image-rendering: pixelated;
+            border-radius: 8px;
+            border: 1px solid rgba(157, 78, 221, 0.3);
+            box-shadow: 0 0 40px var(--purple-glow);
+            transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s ease, filter 0.3s ease;
         }
 
-        h2 {
-            color: var(--purple-primary);
-            font-size: 24px;
-            margin-bottom: 20px;
-            text-transform: lowercase;
-            letter-spacing: 1px;
+        .gif-hero img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 60px var(--purple-glow);
+            filter: brightness(1.1);
+        }
+
+        /* Section labels */
+        .slide-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--purple-light);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(123, 44, 191, 0.35);
+            opacity: 0.9;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(123, 44, 191, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem 1.75rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s var(--ease-out-expo);
+        }
+
+        .card:hover {
+            border-color: rgba(157, 78, 221, 0.4);
+            box-shadow: 0 12px 48px rgba(157, 78, 221, 0.15);
+            transform: translateY(-2px);
         }
 
         .status-box {
-            background: rgba(157, 78, 221, 0.1);
-            border: 1px solid var(--purple-medium);
-            border-radius: 4px;
-            padding: 20px;
-            font-family: monospace;
-            font-size: 13px;
-            color: var(--purple-light);
-            margin: 20px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text);
+            line-height: 2;
+            letter-spacing: 0.04em;
         }
 
-        .stats-container {
+        .stats-wrap {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 1.5rem;
             flex-wrap: wrap;
-            margin: 30px 0;
+        }
+
+        .stats-wrap img {
+            border-radius: 12px;
+            border: 1px solid rgba(123, 44, 191, 0.25);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s ease;
+        }
+
+        .stats-wrap img:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 48px var(--purple-glow);
+        }
+
+        .focus-grid {
+            display: grid;
+            gap: 0.75rem;
         }
 
         .focus-item {
-            margin: 15px 0;
-            padding-left: 20px;
+            background: var(--bg-card);
+            border: 1px solid rgba(123, 44, 191, 0.18);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            transition: border-color 0.35s ease, transform 0.35s var(--ease-out-expo), box-shadow 0.35s ease;
+        }
+
+        .focus-item:hover {
+            border-color: rgba(157, 78, 221, 0.45);
+            transform: translateX(6px);
+            box-shadow: 0 4px 24px rgba(157, 78, 221, 0.12);
         }
 
         .focus-item strong {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
             color: var(--purple-primary);
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .focus-item span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
         }
 
         .project-item {
-            margin: 20px 0;
-            padding: 15px;
-            border-left: 2px solid var(--purple-medium);
-            transition: all 0.3s ease;
+            background: var(--bg-card);
+            border: 1px solid rgba(123, 44, 191, 0.18);
+            border-radius: 10px;
+            padding: 1.1rem 1.35rem;
+            margin-bottom: 0.6rem;
+            transition: border-color 0.35s ease, transform 0.35s var(--ease-out-expo), box-shadow 0.35s ease;
         }
 
+        .project-item:last-child { margin-bottom: 0; }
+
         .project-item:hover {
-            border-left-color: var(--purple-primary);
-            background: rgba(157, 78, 221, 0.05);
-            transform: translateX(5px);
+            border-color: rgba(157, 78, 221, 0.5);
+            transform: translateX(6px);
+            box-shadow: 0 6px 28px rgba(157, 78, 221, 0.18);
         }
 
         .project-item strong {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
             color: var(--purple-primary);
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 0.35rem;
+            font-weight: 600;
         }
 
-        .project-item code {
-            color: var(--purple-medium);
-            font-size: 12px;
+        .project-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .project-item a {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--purple-light);
+            background: rgba(157, 78, 221, 0.15);
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .project-item a:hover {
+            background: rgba(157, 78, 221, 0.3);
+            color: #fff;
         }
 
         .manifest {
             font-style: italic;
-            line-height: 2;
-            color: var(--purple-light);
-            margin: 30px 0;
+            font-size: 0.9rem;
+            line-height: 1.95;
+            color: var(--text-muted);
+            padding: 1.5rem 1.75rem;
+            background: var(--bg-card);
+            border: 1px solid rgba(123, 44, 191, 0.2);
+            border-radius: 12px;
         }
 
         .manifest strong {
             color: var(--purple-primary);
             font-style: normal;
+            font-weight: 600;
         }
 
         .channels {
-            font-family: monospace;
-            font-size: 13px;
-            color: var(--purple-medium);
-            line-height: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            justify-content: center;
         }
 
-        .channels code {
+        .channels a {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 0.65rem 1.1rem;
+            background: var(--bg-card);
+            border: 1px solid rgba(123, 44, 191, 0.25);
+            border-radius: 8px;
+            letter-spacing: 0.05em;
+            transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s var(--ease-out-expo);
+        }
+
+        .channels a:hover {
             color: var(--purple-light);
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding: 40px 0;
-        }
-
-        .footer img {
-            margin: 20px 0;
-        }
-
-        .footer pre {
-            color: var(--purple-primary);
-            font-family: monospace;
-            font-size: 14px;
+            border-color: rgba(157, 78, 221, 0.5);
+            box-shadow: 0 0 24px rgba(157, 78, 221, 0.25);
+            transform: scale(1.05);
         }
 
         .gif-row {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
+            gap: 1.25rem;
+            margin: 2rem 0;
             flex-wrap: wrap;
         }
 
         .gif-row img {
             image-rendering: pixelated;
+            border-radius: 8px;
+            border: 1px solid rgba(123, 44, 191, 0.25);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+            transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s ease;
         }
 
-        a {
-            color: var(--purple-light);
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .gif-row img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px var(--purple-glow);
         }
 
-        a:hover {
+        .footer-mask {
+            margin: 1.5rem 0;
+            filter: drop-shadow(0 0 28px var(--purple-glow));
+            transition: filter 0.5s ease;
+        }
+
+        .footer-mask:hover {
+            filter: drop-shadow(0 0 40px var(--purple-glow)) brightness(1.05);
+        }
+
+        .footer pre {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
             color: var(--purple-primary);
-            text-shadow: 0 0 5px var(--purple-primary);
+            letter-spacing: 0.08em;
+            opacity: 0.95;
+        }
+
+        /* Progress dots */
+        .nav-dots {
+            position: fixed;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .nav-dots a {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(123, 44, 191, 0.35);
+            transition: background 0.4s ease, transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease;
+        }
+
+        .nav-dots a:hover {
+            background: rgba(157, 78, 221, 0.6);
+            transform: scale(1.3);
+            box-shadow: 0 0 12px var(--purple-glow);
+        }
+
+        .nav-dots a.is-active {
+            background: var(--purple-primary);
+            box-shadow: 0 0 16px var(--purple-glow);
+            transform: scale(1.2);
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 32px;
-            }
-            
-            .stats-container {
-                flex-direction: column;
-            }
+            .slide { padding: 3rem 1rem; }
+            .nav-dots { right: 0.75rem; }
+            .stats-wrap { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="gif-container">
-                <img src="assets/anim/glitch-effect-1.gif" alt="y2k" width="120" height="120" />
-            </div>
-            <h1>@descambiado</h1>
-            <p class="tagline">SOC Analyst | Purple Team | Tool Builder</p>
-            <div class="gif-container">
-                <img src="assets/anim/glitch-effect-2.gif" alt="y2k" width="80" height="80" />
-            </div>
-        </header>
+    <nav class="nav-dots" aria-hidden="true">
+        <a href="#s1" title="Inicio"></a>
+        <a href="#s2" title="Status"></a>
+        <a href="#s3" title="Stats"></a>
+        <a href="#s4" title="Focus"></a>
+        <a href="#s5" title="Projects"></a>
+        <a href="#s6" title="Manifest"></a>
+        <a href="#s7" title="Channels"></a>
+        <a href="#s8" title="Outro"></a>
+    </nav>
 
-        <section>
-            <h2>status</h2>
-            <div class="status-box">
-                operator_state  : active<br>
-                focus           : detection engineering · purple team · automation<br>
-                workspace       : live
+    <div class="slides">
+        <!-- Slide 1: Hero -->
+        <section class="slide" id="s1">
+            <div class="slide-content" style="text-align: center;">
+                <div class="glitch-wrap">
+                    <h1>@descambiado</h1>
+                </div>
+                <p class="tagline">SOC Analyst · Purple Team · Tool Builder</p>
+                <div class="gif-hero">
+                    <img src="assets/anim/glitch-effect-1.gif" alt="" width="100" height="100" />
+                    <img src="assets/anim/glitch-effect-2.gif" alt="" width="72" height="72" />
+                </div>
             </div>
         </section>
 
-        <section>
-            <div class="stats-container">
-                <img src="https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true" alt="Stats" />
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true" alt="Top Languages" />
+        <!-- Slide 2: Status -->
+        <section class="slide" id="s2">
+            <div class="slide-content">
+                <div class="slide-label">status</div>
+                <div class="card status-box">
+                    operator_state  : active<br>
+                    focus           : detection engineering · purple team · automation<br>
+                    workspace       : live
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2>focus</h2>
-            <div class="focus-item">
-                <strong>Detection Engineering</strong>
-                MITRE ATT&CK · SIEM correlation · Threat hunting
-            </div>
-            <div class="focus-item">
-                <strong>Purple Team Operations</strong>
-                Red/Blue convergence · Adversary simulation · Defensive validation
-            </div>
-            <div class="focus-item">
-                <strong>Automation & Tooling</strong>
-                Python · Bash · APIs · Internal frameworks
-            </div>
-            <div class="focus-item">
-                <strong>BOFA Suite</strong>
-                150+ tools for Blue/Red/Purple Team operations
+        <!-- Slide 3: Stats -->
+        <section class="slide" id="s3">
+            <div class="slide-content">
+                <div class="stats-wrap">
+                    <img src="https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true" alt="Stats" />
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true" alt="Top Languages" />
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2>projects</h2>
-            <div class="project-item">
-                <strong>SotyHUB</strong>
-                Cybersecurity community & knowledge ecosystem<br>
-                <code>https://sotyhub.com</code>
-            </div>
-            <div class="project-item">
-                <strong>BOFA</strong>
-                Cybersecurity Operations Framework Advanced (150+ tools)<br>
-                <code>https://github.com/descambiado/BOFA</code>
-            </div>
-            <div class="project-item">
-                <strong>SOTYBOT</strong>
-                Operator-oriented AI assistant / open agent engine<br>
-                <code>https://github.com/descambiado/Sotybot</code>
-            </div>
-            <div class="project-item">
-                <strong>SOTYPOT</strong>
-                Modular multi-honeypot platform (TPOT CE remix)<br>
-                <code>https://github.com/descambiado/Sotypot</code>
-            </div>
-            <div class="project-item">
-                <strong>Baby Pluto Guard</strong>
-                Educational monitoring & detection scanner
+        <!-- Slide 4: Focus -->
+        <section class="slide" id="s4">
+            <div class="slide-content">
+                <div class="slide-label">focus</div>
+                <div class="focus-grid">
+                    <div class="focus-item">
+                        <strong>Detection Engineering</strong>
+                        <span>MITRE ATT&CK · SIEM correlation · Threat hunting</span>
+                    </div>
+                    <div class="focus-item">
+                        <strong>Purple Team Operations</strong>
+                        <span>Red/Blue convergence · Adversary simulation · Defensive validation</span>
+                    </div>
+                    <div class="focus-item">
+                        <strong>Automation & Tooling</strong>
+                        <span>Python · Bash · APIs · Internal frameworks</span>
+                    </div>
+                    <div class="focus-item">
+                        <strong>BOFA Suite</strong>
+                        <span>150+ tools for Blue/Red/Purple Team operations</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <div class="gif-row">
-            <img src="assets/anim/glitch-effect-4.gif" alt="y2k" width="100" height="100" />
-            <img src="assets/anim/glitch-effect-5.gif" alt="y2k" width="100" height="100" />
-        </div>
-
-        <section>
-            <h2>manifest</h2>
-            <div class="manifest">
-                No construyo para métricas.<br>
-                No publico para validación.<br>
-                Publico para <strong>externalizar conocimiento operativo</strong>.<br><br>
-                Aquí hay: iteraciones, fallos, sistemas parciales, experimentos vivos.<br><br>
-                Si te sirve, úsalo.<br>
-                Si lo puedes mejorar, contribuye.
+        <!-- Slide 5: Projects -->
+        <section class="slide" id="s5">
+            <div class="slide-content">
+                <div class="slide-label">projects</div>
+                <div class="project-item">
+                    <strong>SotyHUB</strong>
+                    <p>Cybersecurity community & knowledge ecosystem</p>
+                    <a href="https://sotyhub.com" target="_blank" rel="noopener">sotyhub.com</a>
+                </div>
+                <div class="project-item">
+                    <strong>BOFA</strong>
+                    <p>Cybersecurity Operations Framework Advanced (150+ tools)</p>
+                    <a href="https://github.com/descambiado/BOFA" target="_blank" rel="noopener">github.com/descambiado/BOFA</a>
+                </div>
+                <div class="project-item">
+                    <strong>SOTYBOT</strong>
+                    <p>Operator-oriented AI assistant / open agent engine</p>
+                    <a href="https://github.com/descambiado/Sotybot" target="_blank" rel="noopener">github.com/descambiado/Sotybot</a>
+                </div>
+                <div class="project-item">
+                    <strong>SOTYPOT</strong>
+                    <p>Modular multi-honeypot platform (TPOT CE remix)</p>
+                    <a href="https://github.com/descambiado/Sotypot" target="_blank" rel="noopener">github.com/descambiado/Sotypot</a>
+                </div>
+                <div class="project-item">
+                    <strong>Baby Pluto Guard</strong>
+                    <p>Educational monitoring & detection scanner</p>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2>channels</h2>
-            <div class="channels">
-                WEB · <code>https://descambiado.com</code><br>
-                SOTYHUB · <code>https://sotyhub.com</code><br>
-                BLOG · <code>https://noticias.sotyhub.com</code><br>
-                DISCORD · <code>https://discord.gg/sotyhub</code><br>
-                YOUTUBE · <code>https://youtube.com/@Descambiado</code>
+        <!-- Slide 6: GIFs + Manifest -->
+        <section class="slide" id="s6">
+            <div class="slide-content">
+                <div class="gif-row">
+                    <img src="assets/anim/glitch-effect-4.gif" alt="" width="88" height="88" />
+                    <img src="assets/anim/glitch-effect-5.gif" alt="" width="88" height="88" />
+                </div>
+                <div class="slide-label">manifest</div>
+                <div class="manifest">
+                    No construyo para métricas.<br>
+                    No publico para validación.<br>
+                    Publico para <strong>externalizar conocimiento operativo</strong>.<br><br>
+                    Aquí hay: iteraciones, fallos, sistemas parciales, experimentos vivos.<br><br>
+                    Si te sirve, úsalo.<br>
+                    Si lo puedes mejorar, contribuye.
+                </div>
             </div>
         </section>
 
-        <footer class="footer">
-            <img src="assets/anim/mask-purple.svg" alt="mask" width="180" height="180" />
-            <pre>
+        <!-- Slide 7: Channels -->
+        <section class="slide" id="s7">
+            <div class="slide-content">
+                <div class="slide-label">channels</div>
+                <div class="channels">
+                    <a href="https://descambiado.com" target="_blank" rel="noopener">WEB</a>
+                    <a href="https://sotyhub.com" target="_blank" rel="noopener">SOTYHUB</a>
+                    <a href="https://noticias.sotyhub.com" target="_blank" rel="noopener">BLOG</a>
+                    <a href="https://discord.gg/sotyhub" target="_blank" rel="noopener">DISCORD</a>
+                    <a href="https://youtube.com/@Descambiado" target="_blank" rel="noopener">YOUTUBE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Outro -->
+        <section class="slide" id="s8">
+            <div class="slide-content" style="text-align: center;">
+                <img class="footer-mask" src="assets/anim/mask-purple.svg" alt="" width="160" height="160" />
+                <pre>
 descambiado != broken
 descambiado == out of pattern
-            </pre>
-        </footer>
+                </pre>
+            </div>
+        </section>
     </div>
+
+    <script>
+        (function () {
+            var slides = document.querySelectorAll('.slide');
+            var dots = document.querySelectorAll('.nav-dots a');
+
+            function setInView() {
+                var h = window.innerHeight;
+                slides.forEach(function (slide, i) {
+                    var rect = slide.getBoundingClientRect();
+                    var mid = rect.top + rect.height / 2;
+                    var inView = mid >= 0 && mid <= h;
+                    slide.classList.toggle('is-inview', inView);
+                    if (dots[i]) dots[i].classList.toggle('is-active', inView);
+                });
+            }
+
+            window.addEventListener('scroll', setInView);
+            window.addEventListener('resize', setInView);
+            setInView();
+        })();
+    </script>
 </body>
 </html>
