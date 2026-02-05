@@ -1,15 +1,12 @@
 name: Deploy GitHub Pages
 
-# Temporalmente deshabilitado hasta que GitHub actualice upload-pages-artifact
-# para usar upload-artifact@v4 en lugar de v3 deprecado
-
 on:
-  # push:
-  #   branches:
-  #     - main
-  #   paths:
-  #     - 'index.html'
-  #     - 'assets/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+      - 'assets/**'
   workflow_dispatch:
 
 permissions:

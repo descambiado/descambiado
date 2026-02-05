@@ -59,42 +59,21 @@ def generate_badges(metrics: Dict[str, Any]) -> str:
 
 
 def update_system_status(readme_content: str, metrics: Dict[str, Any]) -> str:
-    """Update status section with current metrics"""
+    """Update status block only (operator_state ... workspace), keep ASCII headers"""
     github = metrics.get("github", {})
-    
-    status_section = f"""## status
-
-<pre style="background: #0d1117; border: 1px solid #7b2cbf; border-radius: 4px; padding: 15px; color: #c77dff; font-family: monospace; font-size: 13px;">
+    status_block = f"""<pre style="background: #0d1117; border: 1px solid #7b2cbf; border-radius: 4px; padding: 12px 16px; color: #c77dff; font-size: 12px; margin: 0;">
 operator_state  : active
 focus           : detection engineering · purple team · automation
 workspace       : live
-repositories    : {github.get('repositories', '--')}
-stars           : {github.get('stars', '--')}
-followers       : {github.get('followers', '--')}
 </pre>"""
-    
-    # Replace status section
-    pattern = r"## status.*?</pre>"
-    replacement = status_section
-    readme_content = re.sub(pattern, replacement, readme_content, flags=re.DOTALL)
-    
+    pattern = r'<pre style="background: #0d1117; border: 1px solid #7b2cbf[^>]*>[\s\S]*?operator_state[\s\S]*?workspace[\s\S]*?live\s*</pre>'
+    if re.search(pattern, readme_content):
+        readme_content = re.sub(pattern, status_block, readme_content, count=1)
     return readme_content
 
 
 def update_telemetry_section(readme_content: str, metrics: Dict[str, Any]) -> str:
-    """Update telemetry section - stats are already in README, just ensure format is correct"""
-    telemetry_section = """<div align="center">
-
-![Stats](https://github-readme-stats.vercel.app/api?username=descambiado&show_icons=true&theme=dark&hide_title=true&bg_color=0d1117&title_color=9d4edd&icon_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=descambiado&layout=compact&theme=dark&bg_color=0d1117&title_color=9d4edd&text_color=c77dff&border_color=7b2cbf&hide_border=true)
-
-</div>"""
-    
-    # Replace stats section if it exists, otherwise do nothing (stats are already in README)
-    pattern = r"<div align=\"center\">\s*!\[Stats\].*?</div>"
-    if re.search(pattern, readme_content, flags=re.DOTALL):
-        readme_content = re.sub(pattern, telemetry_section, readme_content, flags=re.DOTALL)
-    
+    """No stats in README; leave content unchanged"""
     return readme_content
 
 
