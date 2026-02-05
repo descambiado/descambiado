@@ -23,7 +23,7 @@
 
 <a href="https://descambiado.github.io/descambiado/" style="color: #c77dff; text-decoration: none; font-size: 11px; letter-spacing: 0.15em;">[ web ]</a> · <a href="https://github.com/descambiado/descambiado" style="color: #c77dff; text-decoration: none; font-size: 11px; letter-spacing: 0.15em;">[ repo ]</a>
 
-<img src="assets/anim/glitch-effect-2.gif" alt="" width="120" height="120" style="image-rendering: pixelated; margin-top: 12px;" />
+<img src="assets/anim/glitch-effect-2.gif" alt="" width="220" height="220" style="image-rendering: pixelated; margin-top: 12px;" />
 
 </div>
 
