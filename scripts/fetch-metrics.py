@@ -11,7 +11,7 @@ from typing import Dict, Any
 
 GITHUB_USERNAME = "descambiado"
 GITHUB_API = "https://api.github.com"
-OUTPUT_FILE = "metrics.json"
+OUTPUT_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "metrics.json")
 
 
 def fetch_github_stats() -> Dict[str, Any]:

@@ -9,9 +9,9 @@ import re
 from datetime import datetime
 from typing import Dict, Any
 
-METRICS_FILE = "metrics.json"
-CONFIG_FILE = "config/profile-config.json"
-README_FILE = "README.md"
+METRICS_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "metrics.json")
+CONFIG_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config", "profile-config.json")
+README_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "README.md")
 
 
 def load_metrics() -> Dict[str, Any]:
