@@ -1,3 +1,5 @@
+
+<!-- Purple Theme: #9d4edd, #7b2cbf, #5a189a, #c77dff -->
 <div align="center">
 
 <img src="assets/anim/glitch-effect-1.gif" alt="y2k" width="620" height="620" style="image-rendering: pixelated; transition: opacity 0.3s ease;" />
@@ -20,6 +22,9 @@
 operator_state  : active
 focus           : detection engineering · purple team · automation
 workspace       : live
+repositories    : 9
+stars           : 23
+followers       : 4
 </pre>
 
 <div align="center">
