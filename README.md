@@ -45,8 +45,12 @@ SSS~YSSY      YSSP  YSS'      YSSP  SSS    S*S  SSS     S*S  S*S  SSY    S*S  SS
 <a id="status"></a>
 
 <pre style="color: #7b2cbf; font-size: 9px; margin: 0 0 6px 0;">
-▀█▀ █▀▀ █   █▀▀ ▀█▀ ▀█▀ █▀▀
- █  ██▄ █   █▄▄  █   █  ██▄
+                                
+mmm,             '          'T  
+ ]   m,  ,m .mm .m  ..,  m,  ]  
+ ]  ]`]  P `]]]  ]  ]`] ' ]  ]  
+ ]  ]""  [  ]]]  ]  ] ] ."T  ]  
+ ]  'b/  [  ]]] .dm ] ] 'mT  'm 
 </pre>
 
 <pre style="background: #0d1117; border: 1px solid #7b2cbf; border-radius: 4px; padding: 12px 16px; color: #c77dff; font-size: 12px; margin: 0;">
@@ -62,8 +66,12 @@ workspace       : live
 <a id="focus"></a>
 
 <pre style="color: #7b2cbf; font-size: 9px; margin: 0 0 6px 0;">
-█▀▀ █▄ █ █▀ ▀█▀ ▀█▀ █▀▀
-█▄▄ █ ▀█ █▄  █   █  ██▄
+                        
+ mm  .       .          
+]` `.dm  m, .dm . .  m, 
+'bm  ]  ' ]  ]  ] ] ] ' 
+  '[ ]  ."T  ]  ] ]  "\ 
+'md` 'm 'mT  'm 'mT 'm/ 
 </pre>
 
 **<span style="color: #9d4edd;">Detection Engineering</span>** — MITRE ATT&CK · SIEM correlation · Threat hunting  
@@ -81,11 +89,17 @@ workspace       : live
 <a id="projects"></a>
 
 <pre style="color: #7b2cbf; font-size: 9px; margin: 0 0 6px 0;">
-▀█▀ █▀▀ █   █ █ █▀▀ █▀█ █▀▄▀█ █▀▀
- █  ██▄ █▄▄ █▄█ ██▄ █▄█ █ ▀ █ ██▄
+                                                
+,  ,            .mm       ]  '    ]      '   .  
+',/  m,  m,      ]       md .m   md     .m  .dm 
+ T` ]`] ] '      ]      ]`T  ]  ]`T      ]   ]  
+ ]  ]""  "\      ]      ] ]  ]  ] ]      ]   ]  
+ ]  'b/ 'm/     .dm     'bW .dm 'bW     .dm  'm 
+                                                
+                                                
 </pre>
 
-**<span style="color: #9d4edd;">SotyHUB</span>** — Cybersecurity community & knowledge ecosystem · <code style="color: #7b2cbf;">sotyhub.com</code>  
+**<span style="color: #9d4edd;">SotyHUB</span>** — Founder, Main Ecosystem Developer, Cybersecurity community & knowledge ecosystem · <code style="color: #7b2cbf;">sotyhub.com</code>  
 
 **<span style="color: #9d4edd;">BOFA</span>** — Cybersecurity Operations Framework Advanced (150+ tools) · <code style="color: #7b2cbf;">github.com/descambiado/BOFA</code>  
 
@@ -109,8 +123,13 @@ workspace       : live
 <a id="manifest"></a>
 
 <pre style="color: #7b2cbf; font-size: 9px; margin: 0 0 6px 0;">
-█▀▄ █▀▀ █▄ █ █▀█ ▀█▀ █▀▀ █▀█
-█▄▀ ██▄ █ ▀█ █▄█  █  ██▄ █▀▄
+            
+ .m  .m  .m 
+ ` [ ` [ ` [
+ .P  .P  .P 
+ '   '   '  
+ ]   ]   ]  
+
 </pre>
 
 No construyo para métricas. No publico para validación.  
@@ -125,8 +144,12 @@ Si te sirve, úsalo. Si lo puedes mejorar, contribuye.
 <a id="channels"></a>
 
 <pre style="color: #7b2cbf; font-size: 9px; margin: 0 0 6px 0;">
- █▀▄ █▀▀ █  █ ▀█▀
- █▄▀ ██▄ █▄▄█  █
+                                
+ .m ]                   'T      
+.` `].,  m, .., ..,  m,  ]   m, 
+]   ]`] ' ] ]`] ]`] ]`]  ]  ] ' 
+]   ] ] ."T ] ] ] ] ]""  ]   "\ 
+ \m`] ] 'mT ] ] ] ] 'b/  'm 'm/ 
 </pre>
 
 <a href="https://descambiado.com" style="color: #c77dff;">WEB</a> · <a href="https://sotyhub.com" style="color: #c77dff;">SOTYHUB</a> · <a href="https://noticias.sotyhub.com" style="color: #c77dff;">BLOG</a> · <a href="https://discord.gg/sotyhub" style="color: #c77dff;">DISCORD</a> · <a href="https://youtube.com/@Descambiado" style="color: #c77dff;">YOUTUBE</a> · <a href="https://github.com/descambiado" style="color: #c77dff;">GITHUB</a>
