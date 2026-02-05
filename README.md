@@ -1,3 +1,5 @@
+
+<!-- Purple Theme: #9d4edd, #7b2cbf, #5a189a, #c77dff -->
 <!-- #9d4edd · #7b2cbf · #5a189a · #c77dff -->
 
 <div align="center">
