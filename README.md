@@ -10,11 +10,24 @@
 
 <div align="center">
 
-<img src="assets/anim/glitch-effect-1.gif" alt="" width="200" height="200" style="image-rendering: pixelated;" />
+<img src="assets/anim/glitch-effect-1.gif" alt="" width="400" height="400" style="image-rendering: pixelated;" />
 
 <pre style="color: #9d4edd; font-size: 10px; line-height: 1.2; margin: 8px 0; letter-spacing: 2px;">
-█▀▀ █  █ █▀▀ █▀▀ █ ▀█▀ █▀▀ █ █ █▀▀ █▀▀
-█▄█ █▀▀█ █▄█ █▄█ █  █  █▄█ █▀█ █▄█ █▄█
+ .S_sSSs      sSSs    sSSs    sSSs   .S_SSSs     .S_SsS_S.    .S_SSSs     .S   .S_SSSs     .S_sSSs      sSSs_sSSs    
+.SS~YS%%b    d%%SP   d%%SP   d%%SP  .SS~SSSSS   .SS~S*S~SS.  .SS~SSSSS   .SS  .SS~SSSSS   .SS~YS%%b    d%%SP~YS%%b   
+S%S   `S%b  d%S'    d%S'    d%S'    S%S   SSSS  S%S `Y' S%S  S%S   SSSS  S%S  S%S   SSSS  S%S   `S%b  d%S'     `S%b  
+S%S    S%S  S%S     S%|     S%S     S%S    S%S  S%S     S%S  S%S    S%S  S%S  S%S    S%S  S%S    S%S  S%S       S%S  
+S%S    S&S  S&S     S&S     S&S     S%S SSSS%S  S%S     S%S  S%S SSSS%P  S&S  S%S SSSS%S  S%S    S&S  S&S       S&S  
+S&S    S&S  S&S_Ss  Y&Ss    S&S     S&S  SSS%S  S&S     S&S  S&S  SSSY   S&S  S&S  SSS%S  S&S    S&S  S&S       S&S  
+S&S    S&S  S&S~SP  `S&&S   S&S     S&S    S&S  S&S     S&S  S&S    S&S  S&S  S&S    S&S  S&S    S&S  S&S       S&S  
+S&S    S&S  S&S       `S*S  S&S     S&S    S&S  S&S     S&S  S&S    S&S  S&S  S&S    S&S  S&S    S&S  S&S       S&S  
+S*S    d*S  S*b        l*S  S*b     S*S    S&S  S*S     S*S  S*S    S&S  S*S  S*S    S&S  S*S    d*S  S*b       d*S  
+S*S   .S*S  S*S.      .S*P  S*S.    S*S    S*S  S*S     S*S  S*S    S*S  S*S  S*S    S*S  S*S   .S*S  S*S.     .S*S  
+S*S_sdSSS    SSSbs  sSS*S    SSSbs  S*S    S*S  S*S     S*S  S*S SSSSP   S*S  S*S    S*S  S*S_sdSSS    SSSbs_sdSSS   
+SSS~YSSY      YSSP  YSS'      YSSP  SSS    S*S  SSS     S*S  S*S  SSY    S*S  SSS    S*S  SSS~YSSY      YSSP~YSSY    
+                                           SP           SP   SP          SP          SP                              
+                                           Y            Y    Y           Y           Y                               
+                                                                                                                     
 </pre>
 
 <p style="color: #7b2cbf; font-size: 13px; letter-spacing: 0.2em; margin: 4px 0;">SOC ANALYST · PURPLE TEAM · TOOL BUILDER</p>
