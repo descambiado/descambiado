@@ -10,9 +10,9 @@
 
 <div align="center">
 
-<img src="assets/anim/glitch-effect-1.gif" alt="" width="400" height="400" style="image-rendering: pixelated;" />
+<img src="assets/anim/glitch-effect-1.gif" alt="" width="750" height="750" style="image-rendering: pixelated;" />
 
-<pre style="color: #9d4edd; font-size: 10px; line-height: 1.2; margin: 8px 0; letter-spacing: 2px;">
+<pre style="color: #6C0078; font-size: 10px; line-height: 1.2; margin: 8px 0; letter-spacing: 2px;">
  .S_sSSs      sSSs    sSSs    sSSs   .S_SSSs     .S_SsS_S.    .S_SSSs     .S   .S_SSSs     .S_sSSs      sSSs_sSSs    
 .SS~YS%%b    d%%SP   d%%SP   d%%SP  .SS~SSSSS   .SS~S*S~SS.  .SS~SSSSS   .SS  .SS~SSSSS   .SS~YS%%b    d%%SP~YS%%b   
 S%S   `S%b  d%S'    d%S'    d%S'    S%S   SSSS  S%S `Y' S%S  S%S   SSSS  S%S  S%S   SSSS  S%S   `S%b  d%S'     `S%b  
@@ -36,7 +36,7 @@ SSS~YSSY      YSSP  YSS'      YSSP  SSS    S*S  SSS     S*S  S*S  SSY    S*S  SS
 
 <a href="https://descambiado.github.io/descambiado/" style="color: #c77dff; text-decoration: none; font-size: 11px; letter-spacing: 0.15em;">[ web ]</a> · <a href="https://github.com/descambiado/descambiado" style="color: #c77dff; text-decoration: none; font-size: 11px; letter-spacing: 0.15em;">[ repo ]</a>
 
-<img src="assets/anim/glitch-effect-2.gif" alt="" width="220" height="220" style="image-rendering: pixelated; margin-top: 12px;" />
+<img src="assets/anim/glitch-effect-2.gif" alt="" width="450" height="450" style="image-rendering: pixelated; margin-top: 12px;" />
 
 </div>
 
@@ -113,8 +113,8 @@ workspace       : live
 
 <div align="center">
 
-<img src="assets/anim/glitch-effect-4.gif" alt="" width="160" height="160" style="image-rendering: pixelated; margin: 0 8px;" />
-<img src="assets/anim/glitch-effect-5.gif" alt="" width="160" height="160" style="image-rendering: pixelated; margin: 0 8px;" />
+<img src="assets/anim/glitch-effect-4.gif" alt="" width="360" height="360" style="image-rendering: pixelated; margin: 0 8px;" />
+<img src="assets/anim/glitch-effect-5.gif" alt="" width="360" height="360" style="image-rendering: pixelated; margin: 0 8px;" />
 
 </div>
 
