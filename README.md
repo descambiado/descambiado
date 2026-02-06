@@ -10,9 +10,9 @@
 
 <div align="center">
 
-<img src="assets/anim/glitch-effect-1.gif" alt="" width="750" height="750" style="image-rendering: pixelated;" />
+<img src="assets/anim/glitch-effect-1.gif" alt="" width="550" height="550" style="image-rendering: pixelated;" />
 
-<pre style="color: #6C0078; font-size: 10px; line-height: 1.2; margin: 8px 0; letter-spacing: 2px;">
+<pre style="color: #6C0078; font-size: 10px; line-height: 1.2; margin: 6px 0; letter-spacing: 2px;">
  .S_sSSs      sSSs    sSSs    sSSs   .S_SSSs     .S_SsS_S.    .S_SSSs     .S   .S_SSSs     .S_sSSs      sSSs_sSSs    
 .SS~YS%%b    d%%SP   d%%SP   d%%SP  .SS~SSSSS   .SS~S*S~SS.  .SS~SSSSS   .SS  .SS~SSSSS   .SS~YS%%b    d%%SP~YS%%b   
 S%S   `S%b  d%S'    d%S'    d%S'    S%S   SSSS  S%S `Y' S%S  S%S   SSSS  S%S  S%S   SSSS  S%S   `S%b  d%S'     `S%b  
