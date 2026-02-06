@@ -51,8 +51,7 @@ def fetch_github_stats() -> Dict[str, Any]:
                 "stars": total_stars,
                 "followers": user_data.get("followers", 0),
                 "following": user_data.get("following", 0),
-                "recent_commits": recent_commits,
-                "updated_at": datetime.now().isoformat()
+                "recent_commits": recent_commits
             }
         }
     except Exception as e:
@@ -77,8 +76,7 @@ def fetch_wakatime_stats(api_key: str = None) -> Dict[str, Any]:
         
         return {
             "wakatime": {
-                "total_seconds": data.get("data", {}).get("total_seconds", 0),
-                "updated_at": datetime.now().isoformat()
+                "total_seconds": data.get("data", {}).get("total_seconds", 0)
             }
         }
     except Exception as e:
@@ -112,8 +110,8 @@ def main():
         wakatime_stats = fetch_wakatime_stats(wakatime_key)
         metrics.update(wakatime_stats)
     
-    # Add timestamp
-    metrics["last_updated"] = datetime.now().isoformat()
+    # Date only: no cambia cada minuto, así no hay commit en cada run
+    metrics["last_updated"] = datetime.now().strftime("%Y-%m-%d")
     
     # Save metrics
     save_metrics(metrics)

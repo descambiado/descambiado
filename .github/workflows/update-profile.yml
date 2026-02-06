@@ -2,12 +2,9 @@ name: Update Profile
 
 on:
   schedule:
-    # Run every hour
-    - cron: '0 * * * *'
+    # Run once per day at 09:00 UTC (evita commits cada hora)
+    - cron: '0 9 * * *'
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   update-profile:
