@@ -169,5 +169,6 @@ descambiado != broken  ·  descambiado == out of pattern
 </pre>
 
 <pre style="color: #5a189a; font-size: 9px;">David Hernández · @descambiado · operator · live · 2026</pre>
+<a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats.herokuapp.com?user=descambiado&theme=sakura-x&card_width=593&card_height=232" alt="GitHub Streak" /></a>
 
 </div>
