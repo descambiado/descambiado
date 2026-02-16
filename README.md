@@ -11,7 +11,9 @@
 <div align="center">
 
 <img src="assets/anim/glitch-effect-1.gif" alt="" width="550" height="550" style="image-rendering: pixelated;" />
-
+<div align="center">
+<img src="https://komarev.com/ghpvc/?username=descambiado&amp;&amp;style=flat-square" align="center">
+</div>
 <pre style="color: #6C0078; font-size: 10px; line-height: 1.2; margin: 6px 0; letter-spacing: 2px;">
  .S_sSSs      sSSs    sSSs    sSSs   .S_SSSs     .S_SsS_S.    .S_SSSs     .S   .S_SSSs     .S_sSSs      sSSs_sSSs    
 .SS~YS%%b    d%%SP   d%%SP   d%%SP  .SS~SSSSS   .SS~S*S~SS.  .SS~SSSSS   .SS  .SS~SSSSS   .SS~YS%%b    d%%SP~YS%%b   
