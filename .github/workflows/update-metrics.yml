@@ -23,17 +23,19 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install requests
+          pip install --quiet requests
       
       - name: Fetch metrics
         run: |
           cd scripts
-          python fetch-metrics.py
+          python fetch-metrics.py || (echo "Error ejecutando fetch-metrics.py" && exit 1)
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-      
-      - name: Upload metrics artifact
-        uses: actions/upload-artifact@v3
+        continue-on-error: false
+
+      - name: Subir métricas como artefacto
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: metrics
           path: metrics.json
