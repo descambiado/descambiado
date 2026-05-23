@@ -61,7 +61,7 @@ focus           : detection engineering · purple team · automation
 workspace       : live
 </pre>
 
-<pre style="color: #5a189a; font-size: 9px; margin: 8px 0 0 0;">now · detection rules · purple exercises · BOFA iterations</pre>
+<pre style="color: #5a189a; font-size: 9px; margin: 8px 0 0 0;">now · Entra ID detection engineering · Azure-Sentinel OSS · flipper purple team · SIGMA rules</pre>
 
 ---
 
@@ -100,6 +100,10 @@ workspace       : live
                                                 
                                                 
 </pre>
+
+**<span style="color: #9d4edd;">Entra ID Detection Engineering</span>** — KQL hunting queries and SIGMA rules for identity attack detection · 8 PRs merged to Azure/Azure-Sentinel · contributions to SigmaHQ, Splunk, Elastic · <code style="color: #7b2cbf;">github.com/descambiado/entra-id-detection-engineering</code>  
+
+**<span style="color: #9d4edd;">Flipper Purple Team</span>** — BadUSB attack payloads paired with exact SIGMA detection rules and KQL hunting queries · tested end-to-end · <code style="color: #7b2cbf;">github.com/descambiado/flipper-purple-team</code>  
 
 **<span style="color: #9d4edd;">SotyHUB</span>** — Founder, Main Ecosystem Developer, Cybersecurity community & knowledge ecosystem · <code style="color: #7b2cbf;">sotyhub.com</code>  
 
