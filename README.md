@@ -101,15 +101,13 @@ workspace       : live
                                                 
 </pre>
 
-**<span style="color: #9d4edd;">Entra ID Detection Engineering</span>** — KQL hunting queries and SIGMA rules for identity attack detection · 17 PRs merged to Azure/Azure-Sentinel · contributions to Splunk, Elastic · <code style="color: #7b2cbf;">github.com/descambiado/entra-id-detection-engineering</code>  
+**<span style="color: #9d4edd;">Entra ID Detection Engineering</span>** — KQL hunting queries and SIGMA rules for identity attack detection · 18 PRs merged to Azure/Azure-Sentinel · 3 rules merged to Elastic · <code style="color: #7b2cbf;">github.com/descambiado/entra-id-detection-engineering</code>  
 
 **<span style="color: #9d4edd;">Flipper Purple Team</span>** — BadUSB attack payloads paired with exact SIGMA detection rules and KQL hunting queries · tested end-to-end · <code style="color: #7b2cbf;">github.com/descambiado/flipper-purple-team</code>  
 
 **<span style="color: #9d4edd;">SotyHUB</span>** — Founder, Main Ecosystem Developer, Cybersecurity community & knowledge ecosystem · <code style="color: #7b2cbf;">sotyhub.com</code>  
 
-**<span style="color: #9d4edd;">BOFA</span>** — Cybersecurity Operations Framework Advanced (150+ tools) · <code style="color: #7b2cbf;">github.com/descambiado/BOFA</code>  
-
-**<span style="color: #9d4edd;">SOTYBOT</span>** — Operator-oriented AI assistant / open agent engine · <code style="color: #7b2cbf;">github.com/descambiado/Sotybot</code>  
+**<span style="color: #9d4edd;">BOFA</span>** — Cybersecurity Operations Framework Advanced (174 tools) · <code style="color: #7b2cbf;">github.com/descambiado/BOFA</code>  
 
 **<span style="color: #9d4edd;">SOTYPOT</span>** — Modular multi-honeypot platform (TPOT CE remix) · <code style="color: #7b2cbf;">github.com/descambiado/Sotypot</code>  
 
