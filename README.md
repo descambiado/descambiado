@@ -156,7 +156,7 @@ Si te sirve, úsalo. Si lo puedes mejorar, contribuye.
  \m`] ] 'mT ] ] ] ] 'b/  'm 'm/ 
 </pre>
 
-<a href="https://descambiado.github.io/descambiado/" style="color: #c77dff;">WEB</a> · <a href="https://sotyhub.com" style="color: #c77dff;">SOTYHUB</a> · <a href="https://noticias.sotyhub.com" style="color: #c77dff;">BLOG</a> · <a href="https://discord.gg/sotyhub" style="color: #c77dff;">DISCORD</a> · <a href="https://youtube.com/@Descambiado" style="color: #c77dff;">YOUTUBE</a> · <a href="https://github.com/descambiado" style="color: #c77dff;">GITHUB</a>
+<a href="https://descambiado.github.io/descambiado/" style="color: #c77dff;">WEB</a> · <a href="https://sotyhub.com" style="color: #c77dff;">SOTYHUB</a> · <a href="https://discord.gg/sotyhub" style="color: #c77dff;">DISCORD</a> · <a href="https://youtube.com/@Descambiado" style="color: #c77dff;">YOUTUBE</a> · <a href="https://github.com/descambiado" style="color: #c77dff;">GITHUB</a>
 
 ---
 
