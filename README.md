@@ -101,17 +101,19 @@ workspace       : live
                                                 
 </pre>
 
-**<span style="color: #9d4edd;">Entra ID Detection Engineering</span>** — KQL hunting queries and SIGMA rules for identity attack detection · 19 PRs merged to Azure/Azure-Sentinel · 3 rules merged to Elastic · 1 fix merged to SigmaHQ (5 more open) · <code style="color: #7b2cbf;">github.com/descambiado/entra-id-detection-engineering</code>  
+**<span style="color: #9d4edd;">Entra ID Detection Engineering</span>** — KQL hunting queries and SIGMA rules for identity attack detection · 19 PRs merged to Azure/Azure-Sentinel · 3 rules + 1 fix merged to Elastic · 2 fixes merged to SigmaHQ (3 more open) · <code style="color: #7b2cbf;">github.com/descambiado/entra-id-detection-engineering</code>  
 
 **<span style="color: #9d4edd;">Flipper Purple Team</span>** — BadUSB attack payloads paired with exact SIGMA detection rules and KQL hunting queries · tested end-to-end · <code style="color: #7b2cbf;">github.com/descambiado/flipper-purple-team</code>  
 
-**<span style="color: #9d4edd;">SotyHUB</span>** — Founder, Main Ecosystem Developer, Cybersecurity community & knowledge ecosystem · <code style="color: #7b2cbf;">sotyhub.com</code>  
+**<span style="color: #9d4edd;">SotyHUB</span>** — Founder · guided security workflows with human approval and evidence, for consultants and small teams · <code style="color: #7b2cbf;">sotyhub.com</code>  
 
 **<span style="color: #9d4edd;">BOFA</span>** — Local-first execution fabric for authorized security work: duplicate-aware bug bounty workspaces, evidence, and policy-gated AI copilots · <code style="color: #7b2cbf;">github.com/descambiado/BOFA</code>  
 
+**<span style="color: #9d4edd;">SotyRoute</span>** — OPSEC and evidence control plane for authorized security labs: readiness scoring, Host Guard checks, ethical OSINT navigation · Tauri + Rust + React · <code style="color: #7b2cbf;">github.com/descambiado/SotyRoute</code>  
+
 **<span style="color: #9d4edd;">SOTYPOT</span>** — Modular multi-honeypot platform (TPOT CE remix) · <code style="color: #7b2cbf;">github.com/descambiado/Sotypot</code>  
 
-**<span style="color: #9d4edd;">Baby Pluto Guard</span>** — Educational monitoring & detection scanner  
+**<span style="color: #9d4edd;">Baby Pluto Guard</span>** — Educational monitoring & detection scanner · <code style="color: #7b2cbf;">github.com/descambiado/Baby-Pluto-Guard</code>  
 
 ---
 
