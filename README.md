@@ -101,7 +101,7 @@ workspace       : live
                                                 
 </pre>
 
-**<span style="color: #9d4edd;">Entra ID Detection Engineering</span>** — KQL hunting queries and SIGMA rules for identity attack detection · 19 PRs merged to Azure/Azure-Sentinel · 3 rules + 1 fix merged to Elastic · 2 fixes merged to SigmaHQ (3 more open) · <code style="color: #7b2cbf;">github.com/descambiado/entra-id-detection-engineering</code>  
+**<span style="color: #9d4edd;">Entra ID Detection Engineering</span>** — KQL hunting queries and SIGMA rules for identity attack detection · 21 PRs merged to Azure/Azure-Sentinel · 3 rules + 1 fix merged to Elastic · 2 fixes merged to SigmaHQ (5 more open) · <code style="color: #7b2cbf;">github.com/descambiado/entra-id-detection-engineering</code>  
 
 **<span style="color: #9d4edd;">Flipper Purple Team</span>** — BadUSB attack payloads paired with exact SIGMA detection rules and KQL hunting queries · tested end-to-end · <code style="color: #7b2cbf;">github.com/descambiado/flipper-purple-team</code>  
 
